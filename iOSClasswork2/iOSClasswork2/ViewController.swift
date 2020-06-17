@@ -17,20 +17,24 @@ class ViewController: UIViewController {
     
     
     @IBAction func AddAnimalToArray(_ sender: Any) {
-        let animal = animalTextField.text!
+        var animal = animalTextField.text!
         
         
         // MARK: - اكتب ال if statement الكود تحت
+        if animal == "cat"{ emojiArray.append("😺")}
+        else if animal == "panda" { emojiArray.append("🐼")}
+            else if animal == "dog" { emojiArray.append("🐶")}
+        else if animal == "dinasour" {emojiArray.append("🦖")}
         
         
         // MARK: - لا تقم بتغيير هذا السطر⚠️⚠️
         animalTextField.text = ""
-    }
     
     
     
     
-    @IBAction func ShowAnimal(_ sender: Any) {
+    
+        func ShowAnimal(_ sender: Any) {
         // MARK:  تقوم هذه الدالة بعرض الإيموجيز للحيوانات في الأسفل باستعمال `for in`
         animalEmojiLabel.text = ""
         for label in emojiArray
@@ -39,6 +43,7 @@ class ViewController: UIViewController {
         }
         /// **BONUS**: 🎁 قم بمسح مكونات المصفوفة بعد عرضها
 
-    }
+            animal.removeAll()
 }
-
+}
+}
